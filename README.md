@@ -60,20 +60,27 @@ A GLSL shader that creates a cursor smear/trail effect in the [Ghostty](https://
 
 ### Setup
 
-1. Copy the shader file:
+1. Copy the config and shader files:
 
    ```bash
    mkdir -p ~/.config/ghostty/shaders
+   cp ghostty/config ~/.config/ghostty/config
    cp ghostty/cursor_smear.glsl ~/.config/ghostty/shaders/
    ```
 
-2. Add to `~/.config/ghostty/config`:
+2. Restart Ghostty.
 
-   ```
-   custom-shader = "~/.config/ghostty/shaders/cursor_smear.glsl"
-   ```
+### Config Overview
 
-3. Restart Ghostty.
+The included `config` file contains:
+
+- **Font**: ComicShannsMono Nerd Font (English) + LXGW WenKai GB Screen (Chinese)
+- **Font size**: 14.6
+- **Theme**: Dracula-based color palette
+- **Background opacity**: 0.75 (translucent)
+- **Cursor effect**: cursor_smear.glsl shader
+- **Keybindings**: `Ctrl+J` scroll up, `Ctrl+K` scroll down
+- **Other**: auto-copy selection, hide mouse while typing
 
 ### Parameters
 
